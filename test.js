@@ -2,6 +2,10 @@ const e = require("./equalitychecker");
 
 const testCase = [
     { value1: null, value2: null, expected: true, title: "nulls" },
+    { value1: null, value2: 5, expected: false, title: "nulls and number" },
+    { value1: NaN, value2: NaN, expected: true, title: "NaN" },
+
+    { value1: NaN, value2: 4, expected: false, title: "NaN and number" },
     { value1: [], value2: {}, expected: false, title: "different objects" },
 
     { value1: 1, value2: 1, expected: true, title: "Equal numbers" },

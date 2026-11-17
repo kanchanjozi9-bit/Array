@@ -1,7 +1,23 @@
+function type(value) {
+    if (Number.isNaN(value)) return "NaN";
+    return typeof value;
+}
+
+function areTypeEqual(a, b) {
+    return type(a) === type(b);
+}
+
 function isEqual(first, sec) {
-    if (typeof first === "object" && typeof sec === "object" && first !== null)
-        return isObjectEqual(first, sec);
-    return first === sec;
+    if (first === sec) return true;
+    if (!areTypeEqual(first, sec)) return false;
+
+    switch (type(first)) {
+        case "object":
+            return isObjectEqual(first, sec);
+        case "NaN":
+            return true;
+    }
+    return false;
 }
 
 function isObjectEqual(first, sec) {
@@ -11,6 +27,7 @@ function isObjectEqual(first, sec) {
     }
     return first.length === sec.length;
 }
+
 module.exports = {
     isEqual,
 };

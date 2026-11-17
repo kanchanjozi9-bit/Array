@@ -50,7 +50,7 @@ const testCase = [
         value1: "2",
         value2: 2,
         expected: false,
-        title: " same string and number are not equal",
+        title: "same string and number are not equal",
     },
     {
         value1: [],
@@ -62,7 +62,7 @@ const testCase = [
         value1: [1],
         value2: [1],
         expected: true,
-        title: " two array with same elements are equal",
+        title: "two array with same elements are equal",
     },
     {
         value1: [2, 1],
@@ -98,7 +98,7 @@ const testCase = [
         value1: { a: undefined },
         value2: { b: 1 },
         expected: false,
-        title: " two object containing undefined and number are not equal",
+        title: "two object containing undefined and number are not equal",
     },
     {
         value1: { b: "hello" },

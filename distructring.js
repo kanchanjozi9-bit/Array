@@ -1,7 +1,4 @@
 //Destructuring parameters#
-
-const { RL_FUNC_SUBTRACT } = require("raylib");
-
 // Default parameters
 const statusof = function ({
     nameA = "kanchan",

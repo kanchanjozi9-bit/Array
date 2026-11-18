@@ -30,4 +30,5 @@ function isObjectEqual(first, sec) {
 
 module.exports = {
     isEqual,
+    isObjectEqual,
 };
